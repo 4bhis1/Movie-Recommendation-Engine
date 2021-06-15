@@ -1,0 +1,95 @@
+{% extends "navigation.html" %}
+    
+    {% block content %}
+
+    <div style="padding-top: 100px;"></div>
+
+    <div class="movie_data" >
+        <table>
+            <tr>
+                <td  colspan="2" id="inner_link"><h1>{{li[0]}}</h1></td>
+            </tr>
+            <tr>
+                <td><img class="poster" src="{{li[1]}}"></td>
+                <td style="padding: 30px;text-align: left;">
+                    <h4><B>{{li[2]}}</B><span>{{li[3]}}</span></h4>
+                    <h4><b>{{li[4]}}</b></h4>
+                    <h4><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{li[5]}}</span></h4>
+                    <h4><b>{{li[6]}}</b><span>{{li[7]}}</span></h4>
+                    <h4><b>{{li[8]}}</b><span>{{li[9]}}</span></h4>
+                    <h4><b>{{li[10]}}</b><span>{{li[11]}}</span></h4>
+                    <h4><b>{{li[12]}}</b><span>{{li[13]}}</span></h4>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h1 style="text-align: left;margin-left: 100px;">{{li[0]}}, Cast</h1>
+
+    <div class="scrollmenu" id="container">
+        <div class="button_slide" id="rght"><i class="fa fa-arrow-left fa-3x"></i></div>
+        <div class="button_slide" id="lft"><i class="fa fa-arrow-right fa-3x"></i></div>
+        {% for i in li[14] %}
+        <a onclick="" class="cast_list_a">
+        <div>
+            <img src="{{i[2]}}">
+        </div>
+        <div class="name">
+            <h3 class="name">{{i[1]}}</h3>
+            <h3 class="name">as {{i[3]}}</h3>
+        </div>
+        </a>
+        {% endfor %}
+        
+    </div>
+
+    <a href="#inner_link">
+        <div class="up_button">
+            <i class="fa fa-arrow-up fa-3x"></i>
+        </div>
+    </a>
+    
+
+
+    <h1 style="text-align: left;margin-left: 100px;">Recommended Movies</h1>
+
+    <div class="main1" >
+        {% for i in sugested %}
+
+            <div class="details_of_recommended_moives">
+                
+                <div class="clickme_to_show_movie" onclick="movie_recommend('{{i[1]}}')">
+                    Click me
+                </div>
+
+                <div class="image">
+                    <img src="{{i[2]}}">
+                </div>
+                <div class="rank">
+                    <i class="fa fa-star"></i>&nbsp; {{i[4]}}/10
+                </div>
+                <div class="year">
+                    {{i[3]}}
+                </div>
+                <div class="name_of_recommended_movies">
+                    {{i[1]}}
+                </div>
+                
+
+            </div>
+                
+        {% endfor %}
+    </div>
+
+    <a href="#inner_link">
+        <div class="up_button">
+            <i class="fa fa-arrow-up fa-3x"></i>
+        </div>
+    </a>
+      
+      
+      <footer>
+          <div class="footer-2">
+                
+
+{% endblock %}

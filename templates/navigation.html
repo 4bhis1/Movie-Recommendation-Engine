@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Engine</title>
+
+
+    <link rel="icon" href="{{url_for('static',filename='images/logo.png')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/error.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/body.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/navigation.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/footer.css') }}">
+
+</head>
+<body onload="load()">
+
+    <div id="loading"></div>
+    
+    <ul>
+        <li class="home">
+            <a href="/">
+                <i class="fa fa-home" id="home"></i>
+            </a>
+        </li>
+        <li class="search">
+            <form action="#" method="POST">
+                <div class="sug">
+                    
+                    <input type="text" name="ak" id="mvnm" placeholder="Enter your Favourite movie name">
+                    <input type="submit" value="Enter" id="click">
+                    <div id="autocom-box">
+                        <!-- here list are inserted from javascript -->
+                    </div>
+                </div>        
+            </form>
+        </li>
+        
+    </ul>
+    {% block content %}
+    {% endblock %}
+
+     
+    <div class="icon">
+        <a href="https://www.instagram.com/4bhis1/"  target="_blank"><img src="{{url_for('static',filename='images/instagram.png')}}"  class="ico" alt="Instagram"  title="Instagram"></a>
+        <a href="https://github.com/4bhis1?tab=repositories"  target="_blank"><img src="{{url_for('static',filename='images/Github.png')}}" class="ico" alt="Github" title="Github"></a>
+        <a href="https://www.linkedin.com/in/abhishek-kumar-1bb796182/"  target="_blank"><img src="{{url_for('static',filename='images/Linkedin.png')}}" class="ico" alt="Linkedin" title="Linkedin"></a>     
+    </div>
+    <br>
+    <span><h3>&copy; Copyright Abhishek Kumar</h3></span>
+</div>
+</footer>
+
+</body>
+
+<script src="{{ url_for('static', filename='movies.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script src="{{ url_for('static', filename='input.js') }}"></script>
+</html>
+
+

@@ -1,0 +1,107 @@
+
+.heading{
+    font-size: 4vw;
+    color: white;
+    font-weight: bolder;
+    margin-left: 50px;
+}
+
+.heading::after{
+    width: 112px;
+    height: 47px;
+    border-bottom: 1px solid black;
+    position: absolute;
+}
+
+.main1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap:  wrap;
+    margin-top: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.contain{
+    /* display: flex; */
+    margin: 20px;
+    background-color: transparent;
+    width: 200px;
+    height: auto;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    /* padding: 2px; */
+}
+
+.name_of_popular_movie{
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* width: 200px; */
+    /* height: 100px; */
+    font-size: 1.6vw;
+    /* margin-top: 300px; */
+    padding: 5px;
+    /* background-color: aquamarine; */
+    font-weight: bold;
+    color: white;
+    
+    font-size-adjust: 0.58;
+}
+
+.button{
+    position: relative;
+    width: auto;
+    height: 10px;
+    /* padding: 15px; */
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin: 15px;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid aqua;
+    border-radius: 15px;
+}
+
+
+.button:hover{
+    color: white;
+    background-color: #01b4e4;
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    padding: 10px;
+    max-width: 550px;
+    max-height: 550px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    font-size: 2vw;
+    visibility: hidden;
+    opacity: 0;
+    overflow-x: scroll;
+    padding-left: 15px;
+    /* -webkit-transition: opacity 1, visibility 0s linear 0.5s;
+    transition: opacity 1, visibility 0s linear 0.5s; */
+    z-index: 1;
+}
+
+#close{
+    float: right;
+}
+
+#close:hover{
+
+    color:#90cea1;
+    cursor: pointer;
+
+}
+
+hr{
+    margin: 10px;
+}

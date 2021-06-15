@@ -1,0 +1,47 @@
+{% extends "navigation.html" %}
+    
+    {% block content %}
+    
+    
+    <div style="padding-top: 100px;"></div>
+    <span class="heading">Popular</span>
+
+    <div class="popup" id="pp">
+        <span id="head">Abhi</span><i class="fa fa-times" id="close" onclick="cls()"></i>
+        <hr>
+        <span id="overview">content</span>
+    </div>
+
+    <div class="main1">
+        
+        {% for i in popular %}
+            <div class="contain">
+                
+                    <div class="image_of_recommended_movies">
+                        <img src="{{i[2]}}">
+                    </div>
+                    <div class="name_of_popular_movie">
+                        {{i[0]}}
+
+                        <div class="button" onclick="move('{{i[0]}}','{{i[1]}}')">
+                            OverView
+                        </div>
+                    </div>
+            </div>
+    
+        {% endfor %}
+
+    </div>
+
+    
+
+  
+
+
+
+
+    <footer>
+        <div class="footer-2">
+              
+
+{% endblock %}
