@@ -3,7 +3,7 @@ from tmdbv3api import Movie
 from tmdbv3api import Person
 
 tmdb = TMDb()
-tmdb.api_key = '122a9fafd99452516fe83207465ce55d'
+tmdb.api_key = ''
 
 img1="http://image.tmdb.org/t/p/w200/"
 img="http://image.tmdb.org/t/p/w185/"
